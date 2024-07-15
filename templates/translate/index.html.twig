@@ -1,0 +1,17 @@
+{# templates/translate/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Translate{% endblock %}
+
+{% block body %}
+    <h1>Translate</h1>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn">{{ button_label|default('Translate') }}</button>
+    {{ form_end(form) }}
+
+    {% if translatedText %}
+        <h2>Translated Text:</h2>
+        <p>{{ translatedText }}</p>
+    {% endif %}
+{% endblock %}
